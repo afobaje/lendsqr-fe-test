@@ -1,0 +1,112 @@
+$theme-color: #213f7d;
+$input-color: rgba(84, 95, 125, 0.15);
+$text-color: #545f7d;
+$auth-color: #39cdcc;
+
+.body {
+  background-color: #ffff;
+}
+.imgad {
+  padding: 0 20px;
+}
+.header {
+  display: flex;
+  margin: 20px;
+}
+.wrapperbody {
+  display: flex;
+  margin-top: 10dvh;
+  margin-bottom: 10dvh;
+}
+.loginwrapper {
+  width: 60%;
+  margin: auto;
+}
+.login {
+  flex: 1;
+  input {
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+}
+
+.password {
+ font-size:0.75rem;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  color: $auth-color;
+}
+
+.password:hover{
+    text-decoration: underline;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  .emailwrapper {
+    margin-bottom:1.5rem ;
+    input {
+        border: 1px solid $input-color;
+      width: 100%;
+      height: 3.125rem;
+    }
+  }
+}
+
+.buttonwrapper{
+    margin-top: 1.5rem;
+}
+.loginbutton {
+  background-color: $auth-color;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  border: 0px;
+  cursor: pointer;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+}
+
+.formheader {
+  h2 {
+    color: $theme-color;
+    font-family: "Avenir next bold";
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  p {
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+  }
+}
+
+
+.passwordwrapper{
+    border:1px solid $input-color;
+    border-radius:5px;
+    width:100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    height:3.125rem;
+    position:relative;
+    input{
+        border-style: none;
+        outline: none;
+        height: 100%;
+        width:80%;
+    }
+    button{
+        color:$auth-color;
+        right: 10px;
+        top:15px;
+        background-color: transparent;
+        border:none;
+        letter-spacing:0.08rem;
+        cursor:pointer;
+        position:absolute;
+    }
+}

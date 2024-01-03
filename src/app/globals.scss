@@ -1,0 +1,22 @@
+$font-stack:'Avenir next';
+
+*,*:before,*:after{
+box-sizing: border-box;
+margin:0;
+padding:0;
+font-family: $font-stack;
+}
+
+
+@font-face {
+    font-family: 'Avenir next';
+    src: url('./../../assets/Avenir/AvenirNextLTPro-Regular.otf') format('opentype');
+    font-weight: 600;
+}
+
+
+@font-face {
+    font-family: 'Avenir next bold';
+    src: url('./../../assets/Avenir/AvenirNextLTPro-Bold.otf') format('opentype');
+    font-weight:700;
+}
