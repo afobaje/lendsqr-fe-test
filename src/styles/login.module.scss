@@ -6,7 +6,13 @@ $auth-color: #39cdcc;
 .body {
   background-color: #ffff;
 }
+.logo{
+  padding-top:15px;
+  padding-left:15px;
+}
 .imgad {
+    flex:0;
+    vertical-align: middle;
   padding: 0 20px;
 }
 .header {
@@ -108,5 +114,12 @@ $auth-color: #39cdcc;
         letter-spacing:0.08rem;
         cursor:pointer;
         position:absolute;
+    }
+}
+
+
+@media (width < 900px) {
+    .imgad{
+        display:none;
     }
 }

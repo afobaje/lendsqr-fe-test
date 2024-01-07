@@ -8,7 +8,7 @@ export default function Home() {
 
     <main className={styles.body}>
       <header className={styles.header}>
-        <div>
+        <div className={styles.logo}>
           <Logo />
         </div>
       </header>
