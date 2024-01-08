@@ -1,106 +1,44 @@
-import { Table } from '@radix-ui/themes'
+'use client'
 import React from 'react'
-import { UserFilter } from './UsersIcon'
-import { BsThreeDotsVertical } from "react-icons/bs";
+import Filter from './Filter';
+import Options from './Options';
+import dataresource from './../resource/data.json'
 
 
 export default function UserTable() {
+    console.log(dataresource, 'resource')
     return (
         <table className='table'>
             <thead>
                 <tr>
-                    <th><span>ORGANIZATION</span><span><UserFilter /></span></th>
-                    <th><span>USERNAME</span> <span><UserFilter /></span></th>
-                    <th><span>EMAIL</span><span><UserFilter /></span></th>
-                    <th><span>PHONE NUMBER</span><span><UserFilter /></span></th>
-                    <th><span>DATE JOINED</span><span><UserFilter /></span></th>
-                    <th><span>STATUS</span><span><UserFilter /></span></th>
+                    <th><Filter style='tabstyle' filter='ORGANIZATION' /></th>
+                    <th><Filter style='tabstyle' filter='USERNAME' /></th>
+                    <th><Filter style='tabstyle' filter='EMAIL' /></th>
+                    <th><Filter style='tabstyle' filter='PHONE NUMBER' /></th>
+                    <th><Filter style='tabstyle' filter='DATE JOINED' /></th>
+                    <th><Filter style='tabstyle' filter='STATUS' /></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Lendsqr</td>
-                    <td>Adedeji</td>
-                    <td>adedeji@lendsqr.com</td>
-                    <td>08132735880</td>
-                    <td>May 15,2020 10:00am</td>
-                    <td>Active</td>
-                    <td><BsThreeDotsVertical /></td>
-                </tr>
-                <tr>
-                    <td>Lendsqr</td>
-                    <td>Adedeji</td>
-                    <td>adedeji@lendsqr.com</td>
-                    <td>08132735880</td>
-                    <td>May 15,2020 10:00am</td>
-                    <td>Active</td>
-                    <td><BsThreeDotsVertical /></td>
-                </tr>
-                <tr>
-                    <td>Lendsqr</td>
-                    <td>Adedeji</td>
-                    <td>adedeji@lendsqr.com</td>
-                    <td>08132735880</td>
-                    <td>May 15,2020 10:00am</td>
-                    <td>Active</td>
-                    <td><BsThreeDotsVertical /></td>
-                </tr>
-                <tr>
-                    <td>Lendsqr</td>
-                    <td>Adedeji</td>
-                    <td>adedeji@lendsqr.com</td>
-                    <td>08132735880</td>
-                    <td>May 15,2020 10:00am</td>
-                    <td>Active</td>
-                    <td><BsThreeDotsVertical /></td>
-                </tr>
-                <tr>
-                    <td>Lendsqr</td>
-                    <td>Adedeji</td>
-                    <td>adedeji@lendsqr.com</td>
-                    <td>08132735880</td>
-                    <td>May 15,2020 10:00am</td>
-                    <td>Active</td>
-                    <td><BsThreeDotsVertical /></td>
-                </tr>
-                <tr>
-                    <td>Lendsqr</td>
-                    <td>Adedeji</td>
-                    <td>adedeji@lendsqr.com</td>
-                    <td>08132735880</td>
-                    <td>May 15,2020 10:00am</td>
-                    <td>Active</td>
-                    <td><BsThreeDotsVertical /></td>
-                </tr>
-                <tr>
-                    <td>Lendsqr</td>
-                    <td>Adedeji</td>
-                    <td>adedeji@lendsqr.com</td>
-                    <td>08132735880</td>
-                    <td>May 15,2020 10:00am</td>
-                    <td>Active</td>
-                    <td><BsThreeDotsVertical /></td>
-                </tr>
-                <tr>
-                    <td>Lendsqr</td>
-                    <td>Adedeji</td>
-                    <td>adedeji@lendsqr.com</td>
-                    <td>08132735880</td>
-                    <td>May 15,2020 10:00am</td>
-                    <td><span className='active'>Active</span></td>
-                    <td><BsThreeDotsVertical /></td>
-                </tr>
-                <tr>
-                    <td>Lendsqr</td>
-                    <td>Adedeji</td>
-                    <td>adedeji@lendsqr.com</td>
-                    <td>08132735880</td>
-                    <td>May 15,2020 10:00am</td>
-                    <td><span className='active'>Active</span></td>
-                    <td><BsThreeDotsVertical /></td>
-                </tr>
+                {
+                    dataresource.map((val: any, i: any) => {
+                        return (
+                            <tr key={i}>
+                                <td>{val.organization}</td>
+                                <td>{val.name}</td>
+                                <td>{val.email}</td>
+                                <td>{val.phone}</td>
+                                <td>{new Date(val.datejoined).toDateString()}</td>
+                                <td><span className={val.status}>{val.status}</span></td>
+                                <td><Options /></td>
+                            </tr>
+                        )
+                    })
+                }
 
-                
+
+
+
             </tbody>
         </table>
     )

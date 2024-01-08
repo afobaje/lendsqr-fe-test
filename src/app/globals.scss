@@ -20,7 +20,6 @@ $activebg: #39cd620f;
     font-family: $font-stack;
 }
 
-
 @font-face {
     font-family: 'Avenir next';
     src: url('./../../assets/Avenir/AvenirNextLTPro-Regular.otf') format('opentype');
@@ -182,7 +181,7 @@ $activebg: #39cd620f;
         align-items: center;
 
         :first-child {
-            margin-right: 5px;
+            margin-right: 8px;
         }
     }
 }
@@ -200,9 +199,24 @@ $activebg: #39cd620f;
 
 .paginationinfo{
     margin-top: 4rem;
+    justify-content: space-between;
 }
 
+[role="navigation"]{
+    display:flex;
+    list-style: none;
+    li{
+        margin-right: 1rem;
+    }
+}
 
+.activepage{
+    color:$topic;
+}
+.nonactive{
+    cursor:pointer;
+    color:#545f7d99;
+}
 .userinfo{
     display:flex;
     flex-direction: column;
@@ -401,4 +415,52 @@ $activebg: #39cd620f;
         }
     }
     
+}
+
+.tabstyle{
+    all:unset;
+    cursor:pointer;
+}
+
+.filterdropdown{
+    padding: 1.5rem;
+    background-color: $white;
+    position: relative;
+    left:18%;
+    border:1px solid rgba(84,95,125,0.14);
+    box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+}
+
+.filopt{
+    margin-bottom: 10px;
+    span{
+        margin-bottom: 6px;
+    }
+}
+
+.optionsmenu{
+    position: relative;
+    background-color: $white;
+    padding:1.5rem;
+    right: 24%;
+}
+.optionitem{
+    margin-bottom: 1rem;
+    :first-child{
+        margin-right: 0.5rem;
+    }
+}
+
+
+.blacklisted{
+    color:#e4033b;
+    background-color: #e4033b1a;
+    border-radius: 100px;
+    padding: 10px;
+}
+.inactive{
+    border-radius: 100px;
+    padding: 10px;
+    background-color: #545f7d0f;
 }

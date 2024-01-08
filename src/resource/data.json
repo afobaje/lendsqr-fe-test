@@ -1,0 +1,247 @@
+[
+    {
+      "_id": "659c07390c6622a4ff11fb63",
+      "index": 0,
+      "status": "blacklisted",
+      "balance": "$2,793.81",
+      "picture": "http://placehold.it/32x32",
+      "datejoined": "Mon Oct 13 2003 10:59:59 GMT+0100 (West Africa Standard Time)",
+      "age": 26,
+      "eyeColor": "blue",
+      "name": "Eloise Castillo",
+      "gender": "female",
+      "maritalStatus": "<SyntaxError: missing ) after argument list>",
+      "education": "msc",
+      "bvn": "(954) 403-2561",
+      "typeofResidence": "seychelles",
+      "organization": "PORTALINE",
+      "email": "eloisecastillo@portaline.com",
+      "phone": "+234 (972) 483-2106",
+      "address": "755 Harrison Avenue, Catharine, South Dakota, 6513",
+      "about": "Mollit quis mollit commodo reprehenderit mollit commodo reprehenderit. Esse proident eiusmod qui laborum cillum Lorem do do sunt deserunt aliqua. Ipsum ex laboris sunt et anim.\r\n",
+      "registered": "2021-04-23T12:41:29 -01:00",
+      "latitude": 7.027819,
+      "longitude": -158.090335,
+      "tags": [
+        "ex",
+        "veniam",
+        "dolor",
+        "eu",
+        "et",
+        "labore",
+        "velit"
+      ],
+      "friends": [
+        {
+          "id": 0,
+          "name": "Veronica Hammond"
+        },
+        {
+          "id": 1,
+          "name": "Madge Moore"
+        },
+        {
+          "id": 2,
+          "name": "Loraine Patrick"
+        }
+      ],
+      "greeting": "Hello, Eloise Castillo! You have 2 unread messages.",
+      "favoriteFruit": "strawberry"
+    },
+    {
+      "_id": "659c0739d8c16f30d2a9f0c8",
+      "index": 1,
+      "status": "inactive",
+      "balance": "$2,097.43",
+      "picture": "http://placehold.it/32x32",
+      "datejoined": "Tue Feb 27 1973 23:31:07 GMT+0100 (West Africa Standard Time)",
+      "age": 26,
+      "eyeColor": "brown",
+      "name": "Meredith Greer",
+      "gender": "female",
+      "maritalStatus": "<SyntaxError: missing ) after argument list>",
+      "education": "msc",
+      "bvn": "(934) 405-3638",
+      "typeofResidence": "seychelles",
+      "organization": "QIMONK",
+      "email": "meredithgreer@qimonk.com",
+      "phone": "+234 (856) 438-2665",
+      "address": "376 Rutledge Street, Venice, Indiana, 2797",
+      "about": "Culpa veniam deserunt voluptate occaecat in mollit dolor minim sit dolore consequat ex exercitation aliquip. Irure ex quis exercitation deserunt mollit et aliqua elit sit. Tempor cupidatat commodo ex labore nulla enim velit non enim ad amet eiusmod fugiat. Cillum reprehenderit esse in amet elit excepteur eu laborum. Aliqua labore ad tempor consequat quis reprehenderit ad excepteur irure eu est. Culpa reprehenderit id velit exercitation aliquip pariatur proident proident incididunt consectetur sit magna. Quis culpa nisi cillum pariatur laborum aliqua.\r\n",
+      "registered": "2023-06-11T10:09:27 -01:00",
+      "latitude": 61.6194,
+      "longitude": -178.124852,
+      "tags": [
+        "aute",
+        "et",
+        "est",
+        "in",
+        "qui",
+        "labore",
+        "tempor"
+      ],
+      "friends": [
+        {
+          "id": 0,
+          "name": "Randall Hampton"
+        },
+        {
+          "id": 1,
+          "name": "Stafford Dillon"
+        },
+        {
+          "id": 2,
+          "name": "Arlene Adams"
+        }
+      ],
+      "greeting": "Hello, Meredith Greer! You have 4 unread messages.",
+      "favoriteFruit": "apple"
+    },
+    {
+      "_id": "659c073964100a5f9172f314",
+      "index": 2,
+      "status": "inactive",
+      "balance": "$3,985.51",
+      "picture": "http://placehold.it/32x32",
+      "datejoined": "Thu Jan 20 2005 01:33:35 GMT+0100 (West Africa Standard Time)",
+      "age": 37,
+      "eyeColor": "green",
+      "name": "Debora Hoover",
+      "gender": "female",
+      "maritalStatus": "<SyntaxError: missing ) after argument list>",
+      "education": "msc",
+      "bvn": "(894) 449-3254",
+      "typeofResidence": "seychelles",
+      "organization": "AQUAFIRE",
+      "email": "deborahoover@aquafire.com",
+      "phone": "+234 (928) 537-3140",
+      "address": "984 Calyer Street, Juntura, North Carolina, 2361",
+      "about": "Aliquip eu non laboris deserunt irure sunt proident in. Do consequat magna reprehenderit non labore ut. Enim esse incididunt eu nulla deserunt nisi commodo sit occaecat aliqua cillum magna consequat. Enim officia ex velit laborum ullamco elit. Est ad et occaecat non cupidatat Lorem.\r\n",
+      "registered": "2016-12-20T05:46:19 -01:00",
+      "latitude": -65.266172,
+      "longitude": -141.451574,
+      "tags": [
+        "consectetur",
+        "aute",
+        "commodo",
+        "velit",
+        "cupidatat",
+        "aliquip",
+        "eu"
+      ],
+      "friends": [
+        {
+          "id": 0,
+          "name": "Koch Abbott"
+        },
+        {
+          "id": 1,
+          "name": "Grace Garcia"
+        },
+        {
+          "id": 2,
+          "name": "Sims Yang"
+        }
+      ],
+      "greeting": "Hello, Debora Hoover! You have 5 unread messages.",
+      "favoriteFruit": "banana"
+    },
+    {
+      "_id": "659c0739c01218a54fef9dd2",
+      "index": 3,
+      "status": "active",
+      "balance": "$3,438.88",
+      "picture": "http://placehold.it/32x32",
+      "datejoined": "Wed Jan 19 1972 17:35:33 GMT+0100 (West Africa Standard Time)",
+      "age": 32,
+      "eyeColor": "green",
+      "name": "Kaitlin Castaneda",
+      "gender": "female",
+      "maritalStatus": "<SyntaxError: missing ) after argument list>",
+      "education": "bsc",
+      "bvn": "(844) 434-2411",
+      "typeofResidence": "seychelles",
+      "organization": "ISONUS",
+      "email": "kaitlincastaneda@isonus.com",
+      "phone": "+234 (893) 447-3915",
+      "address": "999 Coffey Street, Vaughn, Texas, 7055",
+      "about": "Laborum laboris aliquip eiusmod incididunt anim in incididunt aute et ad aliqua consectetur cillum. Elit do sint id aliqua sint ullamco elit veniam voluptate elit mollit. Adipisicing ex laborum enim voluptate velit incididunt ullamco adipisicing.\r\n",
+      "registered": "2022-02-10T07:21:17 -01:00",
+      "latitude": 12.469211,
+      "longitude": 53.044909,
+      "tags": [
+        "fugiat",
+        "officia",
+        "ipsum",
+        "cupidatat",
+        "Lorem",
+        "ut",
+        "ut"
+      ],
+      "friends": [
+        {
+          "id": 0,
+          "name": "Wiley Barnes"
+        },
+        {
+          "id": 1,
+          "name": "Summer Reese"
+        },
+        {
+          "id": 2,
+          "name": "Mays Solis"
+        }
+      ],
+      "greeting": "Hello, Kaitlin Castaneda! You have 6 unread messages.",
+      "favoriteFruit": "banana"
+    },
+    {
+      "_id": "659c07390a559fdc430abda6",
+      "index": 4,
+      "status": "inactive",
+      "balance": "$3,113.73",
+      "picture": "http://placehold.it/32x32",
+      "datejoined": "Tue Jan 30 1973 21:50:41 GMT+0100 (West Africa Standard Time)",
+      "age": 37,
+      "eyeColor": "green",
+      "name": "Sweet Lyons",
+      "gender": "male",
+      "maritalStatus": "<SyntaxError: missing ) after argument list>",
+      "education": "bsc",
+      "bvn": "(813) 478-2646",
+      "typeofResidence": "seychelles",
+      "organization": "RODEMCO",
+      "email": "sweetlyons@rodemco.com",
+      "phone": "+234 (863) 508-3006",
+      "address": "162 Kaufman Place, Hailesboro, Mississippi, 1887",
+      "about": "Non id dolore culpa tempor veniam ut ipsum dolor ut consectetur magna. Elit ut anim qui eu laboris eiusmod consectetur elit. Est anim ex cupidatat duis esse veniam in excepteur nostrud.\r\n",
+      "registered": "2019-01-10T10:56:07 -01:00",
+      "latitude": -57.669167,
+      "longitude": -114.367612,
+      "tags": [
+        "id",
+        "cillum",
+        "culpa",
+        "reprehenderit",
+        "mollit",
+        "do",
+        "eiusmod"
+      ],
+      "friends": [
+        {
+          "id": 0,
+          "name": "Lacy Mayer"
+        },
+        {
+          "id": 1,
+          "name": "Frazier Stone"
+        },
+        {
+          "id": 2,
+          "name": "Goodman Mcmillan"
+        }
+      ],
+      "greeting": "Hello, Sweet Lyons! You have 3 unread messages.",
+      "favoriteFruit": "banana"
+    }
+  ]

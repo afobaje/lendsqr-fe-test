@@ -33,12 +33,12 @@ async function Page() {
         <UserTable/>
 
 
-        <div className="paginationinfo">
+        <div className="paginationinfo horflex">
           <div className="numbershown">
             <p>Showing 100 out of 100</p>
           </div>
           <div className="pagination">
-          {/* <TablePagination/> */}
+          <TablePagination itemsPerpage={5} />
           </div>
         </div>
       </section>

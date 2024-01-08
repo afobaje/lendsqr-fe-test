@@ -54,7 +54,7 @@ export default function Page() {
                                 </Tabs.List>
                                 <Tabs.Content className='contentwrap' value='one'>
                                     <div className="wrapper">
-                                        <div className="personal verflex">
+                                        <div className="personal ">
                                             <p>Personal Information</p>
                                             <div className="info verflex">
                                                 <div className="infofirstset horflex">
