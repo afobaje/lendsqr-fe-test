@@ -3,10 +3,14 @@ import React from 'react'
 import Filter from './Filter';
 import Options from './Options';
 import dataresource from './../resource/data.json'
+import { useRouter } from 'next/navigation';
 
 
 export default function UserTable() {
-    console.log(dataresource, 'resource')
+    let router = useRouter()
+
+
+   
     return (
         <table className='table'>
             <thead>
@@ -23,7 +27,9 @@ export default function UserTable() {
                 {
                     dataresource.map((val: any, i: any) => {
                         return (
-                            <tr key={i}>
+                            <tr onClick={() => {
+                                router.push(`/users/${val._id}`)
+                            }} key={i}>
                                 <td>{val.organization}</td>
                                 <td>{val.name}</td>
                                 <td>{val.email}</td>

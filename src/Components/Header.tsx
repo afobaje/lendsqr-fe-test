@@ -12,6 +12,12 @@ export default function Header() {
           <div className="logo">
             <Logo/>
           </div>
+
+            {/* <div className={styles.hamburger}>
+              <span></span><span></span><span></span>
+            </div> */}
+          {/* <div className={styles.headwrapper}> */}
+
           <div className={styles.search}>
             <input placeholder='Search for anything' type="text" name="" className={styles.searchbar} id="" />
             <button className={styles.searchbutton}><SearchIcon/></button>
@@ -23,6 +29,7 @@ export default function Header() {
               <li className={styles.profile}><span className={styles.display}>A</span><span className={styles.name}>Adedeji</span><span className={styles.caret}><DropDownCaret/></span></li>
             </ul>
           </nav>
+          {/* </div> */}
         </div>
     </header> 
   )

@@ -2,16 +2,17 @@ import React from 'react'
 import styles from './../styles/sidebar.module.scss'
 import DropDownCaret from './DropDownCaret'
 import { AuditLogs, Dashboard, Decision, Fees, FeesandPricing, Guarantors, Karma, LoanRequests, Loans, Organization, Preference, Reports, Savings, SavingsProduct, ServiceAccount, Services, Settlement, SystemMessages, Transactions, Users, Whitelist } from './SidebarIcons'
+import Link from 'next/link'
 export default function Sidebar() {
     return (
         <aside className={styles.sidebar}>
-            <div>
+            <div className={styles.over}>
                 <div className={styles.org}><span><Organization /></span><span>Switch Organization</span><span><DropDownCaret /></span></div>
                 <div className='list'><span className={styles.dash}><Dashboard /></span><span>Dashboard</span></div>
                 <div className='list'>
                     <span className='headtopic'>CUSTOMERS</span>
                     <ul>
-                        <li><span><Users /></span><span>Users</span></li>
+                        <li><Link href='/users' className='checklink'><span><Users /></span><span>Users</span></Link></li>
                         <li><span><Guarantors /></span><span>Guarantors</span></li>
                         <li><span><Loans /></span><span>Loans</span></li>
                         <li><span><Decision /></span><span>Decision Models</span></li>

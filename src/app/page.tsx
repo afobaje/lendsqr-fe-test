@@ -1,9 +1,19 @@
+'use client'
 import Logo from '@/Components/Logo'
 import Banner from '@/Components/banner'
 import Image from 'next/image'
 import styles from './../styles/login.module.scss'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
+
+  let router =useRouter()
+function handleSubmit(e:any){
+  e.preventDefault()
+  router.push('/users')
+  // router.redirect('/users')
+}
+
   return (
 
     <main className={styles.body}>
@@ -25,14 +35,14 @@ export default function Home() {
           </div>
           <form className={styles.form} >
             <div className={styles.emailwrapper}>
-              <input type="email" placeholder='Email' name="" id="" />
+              <input type="email" required placeholder='Email' name="" id="" />
             </div>
             <div className={styles.passwordwrapper}>
-              <input placeholder='Password' type="password"  name="" id="" />
+              <input required placeholder='Password' type="password"  name="" id="" />
               <button>SHOW</button>
             </div>
             <a href='/' className={styles.password}>FORGOT PASSWORD?</a>
-            <div className={styles.buttonwrapper}><button className={styles.loginbutton}>LOG IN</button></div>
+            <div className={styles.buttonwrapper}><button onClick={handleSubmit} className={styles.loginbutton}>LOG IN</button></div>
           </form>
           </div>
         </div>

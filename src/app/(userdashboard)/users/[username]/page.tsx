@@ -2,25 +2,40 @@
 import { ArrowBack, RatedStar } from '@/Components/UsersIcon'
 import React from 'react'
 import * as Tabs from '@radix-ui/react-tabs'
+import { useRouter } from 'next/navigation'
+import dataresource from './../../../../resource/data.json'
 
-export default function Page() {
+export default function Page({params}:{params:{username:string}}) {
+
+    const router = useRouter()
+    console.log('zankue',dataresource,params.username)
+
+    let [userInfo]=dataresource.filter(val=>val._id==params.username)
+
+    console.log(userInfo,'gstring')
+
+
+    function handleBack() {
+        router.back()
+    }
+
     return (
         <section className='userinfo'>
-            <div className='nav'><span><ArrowBack /></span><span>Back to Users</span></div>
+            <div className='nav' onClick={handleBack}><span><ArrowBack /></span><span>Back to Users</span></div>
             <div className='bottomnav'>
                 <span>User Details</span>
                 <div>
-                    <button className='blacklist ctab'>BLACKLIST USER</button>
-                    <button className='activate ctab'>ACTIVATE USER</button>
+                    <button className='blacklist ctab'>blacklist user</button>
+                    <button className='activate ctab'>activate user</button>
                 </div>
             </div>
             <section>
                 <div className='topheader'>
                     <div className="userdetailsheader">
-                        <div className='horflex'>
+                        {/* <div className='horflex'>
                             <div className='userimg'>
                                 <span className="display">A</span>
-                                {/* <img src="" alt="" /> */}
+                                
                             </div>
                             <div className="username verflex">
                                 <span>Grace Effiom</span>
@@ -40,18 +55,44 @@ export default function Page() {
                                 <span>#200,000.00</span>
                                 <span>9912345678/Providus Bank</span>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="tabs">
                             <Tabs.Root defaultValue='one'>
-                                <Tabs.List className='tablist horflex'>
-                                    <Tabs.Trigger className='triggerbuttons' value='one'>General Details</Tabs.Trigger>
-                                    <Tabs.Trigger className='triggerbuttons' value='two'>Documents</Tabs.Trigger>
-                                    <Tabs.Trigger className='triggerbuttons' value='three'>Bank Details</Tabs.Trigger>
-                                    <Tabs.Trigger className='triggerbuttons' value='four'>Loans</Tabs.Trigger>
-                                    <Tabs.Trigger className='triggerbuttons' value='five'>Savings</Tabs.Trigger>
-                                    <Tabs.Trigger className='triggerbuttons' value='six'>App and System</Tabs.Trigger>
-                                </Tabs.List>
+                                <div className="orifice verflex">
+                                    <div className='firstheader horflex'>
+                                        <div className='userimg'>
+                                            <span className="display">A</span>
+                                            {/* <img src="" alt="" /> */}
+                                        </div>
+                                        <div className="username verflex">
+                                            <span>{userInfo?.name}</span>
+                                            <span>{userInfo?.bvn}</span>
+                                        </div>
+                                        <div className="rule"></div>
+                                        <div className="tie verflex">
+                                            <span>Users Tier</span>
+                                            <div className="stars horflex">
+                                                <span><RatedStar /></span>
+                                                <span><RatedStar /></span>
+                                                <span><RatedStar /></span>
+                                            </div>
+                                        </div>
+                                        <div className="rule"></div>
+                                        <div className="balance verflex">
+                                            <span>#200,000.00</span>
+                                            <span>9912345678/Providus Bank</span>
+                                        </div>
+                                    </div>
+                                    <Tabs.List className='tablist horflex'>
+                                        <Tabs.Trigger className='triggerbuttons' value='one'>General Details</Tabs.Trigger>
+                                        <Tabs.Trigger className='triggerbuttons' value='two'>Documents</Tabs.Trigger>
+                                        <Tabs.Trigger className='triggerbuttons' value='three'>Bank Details</Tabs.Trigger>
+                                        <Tabs.Trigger className='triggerbuttons' value='four'>Loans</Tabs.Trigger>
+                                        <Tabs.Trigger className='triggerbuttons' value='five'>Savings</Tabs.Trigger>
+                                        <Tabs.Trigger className='triggerbuttons' value='six'>App and System</Tabs.Trigger>
+                                    </Tabs.List>
+                                </div>
                                 <Tabs.Content className='contentwrap' value='one'>
                                     <div className="wrapper">
                                         <div className="personal ">
@@ -60,23 +101,23 @@ export default function Page() {
                                                 <div className="infofirstset horflex">
                                                     <div className="fname verflex">
                                                         <span>FULL NAME</span>
-                                                        <span>Grace Effiom</span>
+                                                        <span>{userInfo?.name}</span>
                                                     </div>
                                                     <div className="pnumber verflex">
                                                         <span>PHONE NUMBER</span>
-                                                        <span>08132735880</span>
+                                                        <span>{userInfo?.phone}</span>
                                                     </div>
                                                     <div className="email verflex">
                                                         <span>EMAIL ADDRESS</span>
-                                                        <span>afobajedavid@gmail.com</span>
+                                                        <span>{userInfo?.email}</span>
                                                     </div>
                                                     <div className="bvn verflex">
                                                         <span>BVN</span>
-                                                        <span>030230404043</span>
+                                                        <span>{userInfo?.bvn}</span>
                                                     </div>
                                                     <div className="gender verflex">
                                                         <span>GENDER</span>
-                                                        <span>MALE</span>
+                                                        <span>{userInfo?.gender}</span>
                                                     </div>
                                                 </div>
                                                 <div className="infosecond horflex">
@@ -86,11 +127,11 @@ export default function Page() {
                                                     </div>
                                                     <div className="children verflex">
                                                         <span>CHILDREN</span>
-                                                        <span>None</span>
+                                                        <span>{userInfo?.friends.length}</span>
                                                     </div>
                                                     <div className="residence verflex">
                                                         <span>TYPE OF RESIDENCE</span>
-                                                        <span>Parents Apartment</span>
+                                                        <span>{userInfo?.typeofResidence}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -102,7 +143,7 @@ export default function Page() {
                                                 <div className="edufirstset horflex">
                                                     <div className="level verflex">
                                                         <span>LEVEL OF EDUCATION</span>
-                                                        <span>B.sc</span>
+                                                        <span>{userInfo?.education}</span>
                                                     </div>
                                                     <div className="status verflex">
                                                         <span>EMPLOYMENT STATUS</span>
@@ -120,7 +161,7 @@ export default function Page() {
                                                 <div className="edusecond horflex">
                                                     <div className="officemail verflex">
                                                         <span>OFFICE EMAIL</span>
-                                                        <span>durojaye@gmail.com</span>
+                                                        <span>{userInfo?.email}</span>
                                                     </div>
                                                     <div className="income verflex">
                                                         <span>MONTHLY INCOME</span>
@@ -157,15 +198,15 @@ export default function Page() {
                                             <div className="guarantorinfo horflex">
                                                 <div className="fname verflex">
                                                     <span>FULL NAME</span>
-                                                    <span>Grace Effiom</span>
+                                                    <span>{userInfo?.name}</span>
                                                 </div>
                                                 <div className="pnumber verflex">
                                                     <span>PHONE NUMBER</span>
-                                                    <span>08132735880</span>
+                                                    <span>{userInfo?.phone}</span>
                                                 </div>
                                                 <div className="email verflex">
                                                     <span>EMAIL ADDRESS</span>
-                                                    <span>afobajedavid@gmail.com</span>
+                                                    <span>{userInfo?.email}</span>
                                                 </div>
                                                 <div className="relationship verflex">
                                                     <span>RELATIONSHIP</span>
@@ -175,11 +216,11 @@ export default function Page() {
                                         </div>
                                     </div>
                                 </Tabs.Content>
-                                <Tabs.Content value='two'>Documents</Tabs.Content>
-                                <Tabs.Content value='three'>Bank Details</Tabs.Content>
-                                <Tabs.Content value='four'>Loans</Tabs.Content>
-                                <Tabs.Content value='five'>Savings</Tabs.Content>
-                                <Tabs.Content value='six'>App and System</Tabs.Content>
+                                <Tabs.Content className='contentwrap' value='two'>Documents</Tabs.Content>
+                                <Tabs.Content className='contentwrap' value='three'>Bank Details</Tabs.Content>
+                                <Tabs.Content className='contentwrap' value='four'>Loans</Tabs.Content>
+                                <Tabs.Content className='contentwrap' value='five'>Savings</Tabs.Content>
+                                <Tabs.Content className='contentwrap' value='six'>App and System</Tabs.Content>
                             </Tabs.Root>
                         </div>
                     </div>

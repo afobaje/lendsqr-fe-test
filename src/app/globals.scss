@@ -1,3 +1,5 @@
+
+
 $font-stack: 'Avenir next';
 $font-stack-bold: 'Avenir next bold';
 $theme-color: #39cdcc0f;
@@ -19,6 +21,26 @@ $activebg: #39cd620f;
     padding: 0;
     font-family: $font-stack;
 }
+
+/* width */
+::-webkit-scrollbar{
+    width:8px;
+  }
+  
+  /* track */
+  
+  
+  /* thumb */
+  ::-webkit-scrollbar-thumb{
+    border-radius: 25px;
+    background-color:$topic;
+    
+  }
+  
+  
+  
+  
+  
 
 @font-face {
     font-family: 'Avenir next';
@@ -63,15 +85,39 @@ $activebg: #39cd620f;
 
 .userpage {
     flex: 1;
+    height: 100%;
     padding: 1.875rem;
     background-color: $offwhite;
 }
 
+.checklink{
+    all:unset;
+}
+.firstheader{
+    margin-bottom: 3rem;
+}
 .headtopic {
     margin-bottom: 0.5rem;
     display: inline-block;
     color: $topic;
     font-size: 0.75rem;
+}
+.reset{
+
+    background: $white;
+    border: 1px solid $topic;
+    color:$topic;
+}
+.filter{
+border:1px solid $theme;
+background-color: $theme;
+color:$white;
+}
+.filterbutton{
+    font-family: inherit;
+    padding:10px 14px;
+    border-radius:4px;
+box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.04);
 }
 
 .displaybox {
@@ -108,7 +154,7 @@ $activebg: #39cd620f;
     div {
         border-radius: 0.25rem;
         border: 1px solid rgba(33, 63, 125, 0.06);
-        box-shadow: 3px 5px 11px 0px rgba(0, 0, 0, 0.4);
+        box-shadow: 3px 5px 11px 0px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-basis: 22.5%;
         padding: 20px 40px;
@@ -147,7 +193,7 @@ $activebg: #39cd620f;
     // border-collapse: collapse;
     padding: 1rem;
     color:$topic;
-    box-shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.1);
     width: 100%;
 
 
@@ -222,12 +268,15 @@ $activebg: #39cd620f;
     flex-direction: column;
     padding: 1.875rem;
     flex:1;
+    height: 100%;
+    overflow: auto;
     color:$numbercolor;
 
 
     .ctab{
         background-color: transparent;
         padding: 0.4rem;
+        text-transform: uppercase;
         font-size: 0.875rem;
         letter-spacing: 1.4px;
         cursor:pointer;
@@ -246,6 +295,7 @@ $activebg: #39cd620f;
 
     .nav{
         margin-bottom: 2rem;
+        cursor:pointer;
         :first-child{
             margin-right: 0.3rem;
         }
@@ -259,12 +309,22 @@ $activebg: #39cd620f;
         }
     }
 }
-
-.topheader{
-    box-shadow: 3px 5px 20px 0px rgba(0,0,0,0.04);
-    margin-top: 1rem;
-    background-color: $white;
+.contentwrap{
     padding: 4rem;
+    background-color: $white;
+}
+.orifice{
+    background-color: $white;
+    margin-bottom: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+}
+.topheader{
+    // box-shadow: 3px 5px 20px 0px rgba(0,0,0,0.04);
+    margin-top: 1rem;
+    // background-color: $white;
+    // padding: 4rem;
 }
 
 .verflex{
@@ -320,9 +380,7 @@ $activebg: #39cd620f;
     }
 }
 
-.tabs{
-    margin-top: 3rem;
-}
+
 
 .tablist{
     justify-content: space-between;
@@ -430,6 +488,22 @@ $activebg: #39cd620f;
     border:1px solid rgba(84,95,125,0.14);
     box-shadow: 3px 5px 20px 0px rgba(0, 0, 0, 0.4);
     border-radius: 4px;
+
+    select{
+        width:14.375rem;
+        height:2.5rem;
+        outline: none;
+        padding: 8px;
+        border-radius: 8px;
+    }
+    input{
+        width:14.375rem;
+        height:2.5rem;
+        outline:none;
+        border:1px solid $numbercolor;
+        padding:4px;
+        border-radius: 8px;
+    }
 }
 
 .filopt{
