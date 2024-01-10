@@ -10,22 +10,13 @@ $orange:orange;
     box-shadow:3px 0px 20px 0px rgba(0,0,0,0.04);
 }
 .navwrapper{
+    
     flex-basis: 30%;
 }
-.hamburger{
-    display:hidden;
-    flex-direction:column;
-    span{
-        width:20px;
-        height: 2px;
-        border-radius: 15px;
-        background-color: #000;
-        margin-bottom: .15rem;
 
-    }
-}
 .items{
     list-style: none;
+    cursor:pointer;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -91,15 +82,51 @@ $orange:orange;
     border-top-left-radius: 8px;
 }
 
-
+.hamburger{display: none;}
 @media screen and (width < 800px) {
-  
-   .navwrapper{
+  .logo{
     display: flex;
+}
+.mobiledisplay{
+    display:flex;
+}
+.nonmobiledisplay{
+    display:none;
+}
+    .hamburger{
+        display:flex;
+        cursor:pointer;
+        margin-bottom: 0;
+        margin-top: .5rem;
+        margin-right: 1rem;
+        flex-direction:column;
+        span{
+            width:20px;
+            height: 2px;
+            border-radius: 15px;
+            background-color: #000;
+            margin-bottom: .15rem;
+    
+        }
+    }
+   .navwrapper{
+    flex-direction: column;
+    height: 70vh;
+    width: 40vw;
+    right:0;
+    top:15%;
+    position:absolute;
+    background-color: #fff;
+    // display: none;
     flex-basis: 0;
     .items{
-        align-items: self-start;
-        // flex-direction: column-reverse;
+        margin-top: 2rem;
+
+        height: 50%;
+        justify-content:space-between;
+        align-items: flex-start;
+        padding-left: 2rem;
+        flex-direction: column-reverse;
 
         li{
             margin-bottom: 1rem;

@@ -6,7 +6,7 @@ import { ActivateUser, BlacklistUser, UserDetails } from './UsersIcon'
 
 export default function Options() {
     return (
-        <DropdownMenu styleclassName='tabstyle' option={<BsThreeDotsVertical />}>
+        <DropdownMenu styleclassName='tabstyle ' option={<BsThreeDotsVertical />}>
             <div className="optionsmenu ">
                 <Dropdown.Item>
                     <div className="optionitem">

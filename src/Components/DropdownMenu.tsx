@@ -7,9 +7,7 @@ export default function DropdownMenu({option, children,caret,styleclassName}:{op
             <span>{option}</span>
             {caret}
         </Dropdown.Trigger>
-        <Dropdown.Content onClick={e=>{
-            e.stopPropagation()
-        }}>
+        <Dropdown.Content className='optionstyle'>
             {children}
         </Dropdown.Content>
     </Dropdown.Root>

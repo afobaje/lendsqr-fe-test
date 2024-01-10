@@ -34,3 +34,10 @@ $text-color: #213f7d;
     cursor:pointer;
   }
 }
+
+@media screen and (width<800px) {
+  
+  .hiddenside{
+    display:none;
+  }
+}

@@ -1,11 +1,23 @@
-import React from 'react'
+'use client'
+import React, { createContext, useState } from 'react'
 import styles from './../styles/sidebar.module.scss'
 import DropDownCaret from './DropDownCaret'
 import { AuditLogs, Dashboard, Decision, Fees, FeesandPricing, Guarantors, Karma, LoanRequests, Loans, Organization, Preference, Reports, Savings, SavingsProduct, ServiceAccount, Services, Settlement, SystemMessages, Transactions, Users, Whitelist } from './SidebarIcons'
 import Link from 'next/link'
+import { useMyContext } from './SidebarContext'
+
 export default function Sidebar() {
+
+    const {docked}=useMyContext()
+   console.log(docked,'docked in sidebar')
+
+    
+    
     return (
-        <aside className={styles.sidebar}>
+       
+
+        <aside className={`${styles.sidebar} ${!docked&&styles.hiddenside}`}>
+              
             <div className={styles.over}>
                 <div className={styles.org}><span><Organization /></span><span>Switch Organization</span><span><DropDownCaret /></span></div>
                 <div className='list'><span className={styles.dash}><Dashboard /></span><span>Dashboard</span></div>
@@ -48,5 +60,7 @@ export default function Sidebar() {
                 </div>
             </div>
         </aside>
+      
+       
     )
 }
